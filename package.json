@@ -1,0 +1,15 @@
+{
+  "name": "articles",
+  "version": "0.1.0",
+  "repository": "ssh://git@github.com/HikaruEgashira/articles.git",
+  "author": "HikaruEgashira <shighten@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "zenn-cli": "^0.1.32"
+  },
+  "scripts": {
+    "article:new": "zenn new:article",
+    "book:new": "zenn new:book",
+    "preview": "zenn preview"
+  }
+}
