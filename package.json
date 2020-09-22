@@ -5,11 +5,23 @@
   "author": "HikaruEgashira <shighten@gmail.com>",
   "private": true,
   "dependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "markdownlint-cli": "^0.23.2",
     "zenn-cli": "^0.1.32"
   },
   "scripts": {
-    "article:new": "zenn new:article",
-    "book:new": "zenn new:book",
+    "new:article": "zenn new:article",
+    "new:book": "zenn new:book",
     "preview": "zenn preview"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    ".md": "markdownlint --fix",
+    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
   }
 }
