@@ -21,7 +21,6 @@
     }
   },
   "lint-staged": {
-    ".md": "markdownlint --fix",
-    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
+    ".md": "markdownlint --fix"
   }
 }
